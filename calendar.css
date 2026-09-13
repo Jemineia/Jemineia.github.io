@@ -1,0 +1,541 @@
+/* ========================================
+   기본 설정
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: #f5f5f5;
+  color: #222;
+
+  font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      "Noto Sans KR",
+      sans-serif;
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.site-header {
+  text-align: center;
+
+  padding: 50px 20px 30px;
+
+  background: white;
+
+  border-bottom: 1px solid #ddd;
+}
+
+.site-header h1 {
+  margin: 0 0 10px;
+
+  font-size: 32px;
+}
+
+.site-header p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   Calendar 전체
+======================================== */
+
+.calendar-container {
+  width: min(1500px, 94%);
+
+  margin: 0 auto;
+
+  padding: 40px 0 80px;
+}
+
+
+/* ========================================
+   연도 컨트롤
+======================================== */
+
+.calendar-control {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+.calendar-control h2 {
+  min-width: 150px;
+
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 36px;
+}
+
+.year-button {
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  background: white;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: 0.2s;
+}
+
+.year-button:hover {
+  background: #222;
+  color: white;
+}
+
+
+/* ========================================
+   12개월 Grid
+======================================== */
+
+.calendar-grid {
+  display: grid;
+
+  grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+  gap: 30px;
+}
+
+
+/* ========================================
+   한 달
+======================================== */
+
+.month {
+  position: relative;
+
+  background: white;
+
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* 월 이름 */
+
+.month-title {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #eee;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   요일
+======================================== */
+
+.weekdays {
+  display: grid;
+
+  grid-template-columns:
+        repeat(7, 1fr);
+
+  border-bottom: 1px solid #eee;
+
+  background: #fafafa;
+}
+
+.weekday {
+  padding: 8px 0;
+
+  text-align: center;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #777;
+}
+
+.weekday:first-child {
+  color: #d9534f;
+}
+
+.weekday:last-child {
+  color: #357edd;
+}
+
+
+/* ========================================
+   날짜 영역
+======================================== */
+
+.days {
+  display: grid;
+
+  grid-template-columns:
+        repeat(7, 1fr);
+
+  grid-auto-rows: 55px;
+
+  position: relative;
+}
+
+
+/* 날짜 하나 */
+
+.day {
+  position: relative;
+
+  min-width: 0;
+
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+
+  background: white;
+}
+
+
+/* 마지막 열 */
+
+.day:nth-child(7n) {
+  border-right: none;
+}
+
+
+/* 빈 날짜 */
+
+.day.empty {
+  background: #fafafa;
+}
+
+
+/* 날짜 숫자 */
+
+.day-number {
+  position: absolute;
+
+  top: 6px;
+  left: 7px;
+
+  z-index: 5;
+
+  font-size: 11px;
+
+  color: #555;
+}
+
+
+/* 일요일 */
+
+.day.sunday .day-number {
+  color: #d9534f;
+}
+
+
+/* 토요일 */
+
+.day.saturday .day-number {
+  color: #357edd;
+}
+
+
+/* 오늘 */
+
+.day.today {
+  background: #fff8df;
+}
+
+.day.today .day-number {
+  font-weight: 800;
+
+  color: #e69b00;
+}
+
+
+/* ========================================
+   콘텐츠 레이어
+======================================== */
+
+.content-layer {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+/*
+    콘텐츠 하나
+
+    left:
+    시작 날짜 위치
+
+    width:
+    콘텐츠가 차지하는 날짜 수
+
+    top:
+    겹치는 콘텐츠를 피하기 위한 높이
+*/
+
+.content-item {
+  position: absolute;
+
+  height: 48px;
+
+  padding: 2px;
+
+  pointer-events: auto;
+
+  cursor: pointer;
+
+  z-index: 3;
+}
+
+
+/* 콘텐츠 이미지 */
+
+.content-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 5px;
+
+  transition:
+      transform 0.2s,
+      filter 0.2s;
+
+  box-shadow:
+      0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 마우스를 올렸을 때 */
+
+.content-item:hover {
+  z-index: 20;
+}
+
+.content-item:hover .content-image {
+  transform: translateY(-2px);
+
+  filter: brightness(1.05);
+}
+
+
+/* ========================================
+   이미지가 없는 콘텐츠
+======================================== */
+
+.content-no-image {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 8px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  border-radius: 5px;
+
+  background: #444;
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   콘텐츠 툴팁
+======================================== */
+
+.content-tooltip {
+  position: absolute;
+
+  left: 50%;
+  bottom: calc(100% + 8px);
+
+  transform: translateX(-50%);
+
+  width: max-content;
+  max-width: 220px;
+
+  padding: 8px 10px;
+
+  border-radius: 6px;
+
+  background: rgba(0, 0, 0, 0.85);
+
+  color: white;
+
+  font-size: 12px;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 0.15s;
+
+  z-index: 100;
+}
+
+.content-item:hover .content-tooltip {
+  opacity: 1;
+}
+
+
+/* ========================================
+   Footer
+======================================== */
+
+.site-footer {
+  padding: 30px;
+
+  text-align: center;
+
+  color: #999;
+
+  font-size: 12px;
+}
+
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 1100px) {
+
+  .calendar-grid {
+    grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    padding: 35px 15px 25px;
+  }
+
+  .site-header h1 {
+    font-size: 25px;
+  }
+
+
+  .calendar-container {
+    width: 96%;
+
+    padding-top: 25px;
+  }
+
+
+  .calendar-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .calendar-control {
+    margin-bottom: 25px;
+
+    gap: 20px;
+  }
+
+
+  .calendar-control h2 {
+    font-size: 30px;
+  }
+
+
+  .days {
+    grid-auto-rows: 60px;
+  }
+
+
+  .content-item {
+    height: 52px;
+  }
+
+}
+
+
+/* ========================================
+   아주 작은 화면
+======================================== */
+
+@media (max-width: 400px) {
+
+  .days {
+    grid-auto-rows: 52px;
+  }
+
+  .content-item {
+    height: 44px;
+  }
+
+  .day-number {
+    top: 4px;
+    left: 5px;
+
+    font-size: 10px;
+  }
+
+}
