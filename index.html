@@ -1,57 +1,129 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>콘텐츠 캘린더</title>
+  <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+  >
 
-  <link rel="stylesheet" href="calendar.css">
+  <title>My Content Calendar</title>
+
+  <link
+      rel="stylesheet"
+      href="calendar.css"
+  >
+
 </head>
+
 
 <body>
 
+
 <header class="site-header">
+
   <h1>My Content Calendar</h1>
 
   <p>
     내가 즐겼던 콘텐츠를 기록합니다.
   </p>
+
 </header>
+
 
 
 <main class="calendar-container">
 
-  <!-- 연도 변경 -->
-  <section class="calendar-control">
 
-    <button id="prev-year" class="year-button">
+  <!-- =================================
+       연도 선택
+  ================================== -->
+
+  <section class="year-control">
+
+    <button
+        id="prev-year"
+        class="control-button"
+        aria-label="이전 연도"
+    >
       ◀
     </button>
+
 
     <h2 id="current-year">
       2026
     </h2>
 
-    <button id="next-year" class="year-button">
+
+    <button
+        id="next-year"
+        class="control-button"
+        aria-label="다음 연도"
+    >
       ▶
     </button>
 
   </section>
 
 
-  <!-- 12개월이 들어가는 영역 -->
-  <section id="calendar" class="calendar-grid"></section>
+
+  <!-- =================================
+       월 선택
+  ================================== -->
+
+  <section class="month-control">
+
+    <button
+        id="prev-month"
+        class="month-button"
+        aria-label="이전 달"
+    >
+      ◀
+    </button>
+
+
+    <h3 id="current-month">
+      1월
+    </h3>
+
+
+    <button
+        id="next-month"
+        class="month-button"
+        aria-label="다음 달"
+    >
+      ▶
+    </button>
+
+  </section>
+
+
+
+  <!-- =================================
+       달력
+  ================================== -->
+
+  <section id="calendar"></section>
+
 
 </main>
 
 
+
 <footer class="site-footer">
-  <p>My Content Calendar</p>
+
+  <p>
+    My Content Calendar
+  </p>
+
 </footer>
 
 
 <script src="calendar.js"></script>
 
 </body>
+
 </html>
