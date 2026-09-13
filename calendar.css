@@ -404,7 +404,8 @@ body {
 
   pointer-events: none;
 
-  z-index: 2;
+  /* 날짜 숫자보다 위에 표시 */
+  z-index: 20;
 
 }
 
@@ -425,7 +426,7 @@ body {
 
   cursor: pointer;
 
-  z-index: 3;
+  z-index: 21;
 
 }
 
@@ -525,7 +526,7 @@ body {
 
   border-radius: 6px;
 
-  background: rgba(0, 0, 0, 0.88);
+  background: rgb(0, 0, 0);
 
   color: white;
 
@@ -537,7 +538,7 @@ body {
 
   transition: opacity 0.15s;
 
-  z-index: 200;
+  z-index: 9999;
 
 }
 
@@ -667,9 +668,20 @@ body {
 
   .content-layer {
 
-    top: 25px;
+    position: absolute;
 
-    height: calc(100% - 25px);
+    top: 30px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: calc(100% - 30px);
+
+    pointer-events: none;
+
+    /* 날짜 숫자보다 위에 표시 */
+    z-index: 20;
 
   }
 
@@ -679,6 +691,8 @@ body {
     height: 60px;
 
     padding: 2px;
+
+    z-index: 21;
 
   }
 

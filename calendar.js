@@ -35,7 +35,7 @@ const contents = [
   {
     title: "마법소녀의 마녀재판(마노사바)",
 
-    startDate: "2026-08-30",
+    startDate: "2026-08-23",
 
     endDate: "2026-09-05",
 
