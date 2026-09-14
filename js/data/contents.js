@@ -2,28 +2,66 @@
    콘텐츠 데이터
 ======================================== */
 
-/*
-    images:
-    콘텐츠에 사용할 이미지 배열
-
-    1줄짜리 콘텐츠
-    → images[0]
-
-    2줄짜리 콘텐츠
-    → 첫 번째 줄 : images[0]
-    → 두 번째 줄 : images[1]
-
-    3줄짜리 콘텐츠
-    → 첫 번째 줄 : images[0]
-    → 두 번째 줄 : images[1]
-    → 세 번째 줄 : images[2]
-
-    이미지가 부족하면 해당 줄에는
-    이미지 대신 콘텐츠 제목이 표시됨.
-*/
-
 const contents = [
+  {
+    title: "니케 2x2 Love",
+    startDate: "2026-04-04",
+    endDate: "2026-04-08",
 
+    images:[
+      {
+        src : "images/contents/2x2Love.png",
+        fit : "background"
+      },
+      {
+        src : "images/contents/2x2Love2.png",
+        fit : "background"
+      }
+    ]
+  },
+  {
+    title : "당신과 나의 존재불명",
+    startDate: "2026-05-10",
+    endDate: "2026-05-12",
+    images : [
+        {
+          src: "images/contents/noexistence.png",
+          fit : "background"
+        }
+    ]
+  },
+  {
+    title : "초 카구야 공주!",
+    startDate: "2026-07-05",
+    endDate: "2026-07-06",
+
+    images:[
+      {
+        src : "images/contents/kaguyahime.jpg",
+        fit : "cover"
+      }
+    ]
+  },
+  {
+    title: "향기로운 꽃은 늠름하게 핀다",
+    startDate: "2026-08-10",
+    endDate: "2026-08-24",
+
+    images: [
+      {
+        src: "images/contents/flower1.jpg",
+        fit: "background"
+      },
+      {
+        src: "images/contents/flower2.webp",
+        fit: "background"
+      },
+      {
+        src: "images/contents/flower3.jpg",
+        fit: "background"
+      }
+    ]
+  },
   {
     title: "마법소녀의 마녀재판(마노사바)",
 
@@ -38,28 +76,23 @@ const contents = [
     */
     images: [
       {
-        src: "images/contents/manosaba1.png",
-        fit: "cover"
-      },
-      {
-        src: "images/contents/manosaba2.png",
+        src: "images/contents/manosaba5.png",
         fit: "cover"
       },
       {
         src: "images/contents/manosaba3.png",
-        fit: "background"
+        fit: "cover"
       },
       {
         src: "images/contents/manosaba4.png",
+        fit: "background"
+      },
+      {
+        src: "images/contents/manosaba1.png",
         fit: "background"
       }
     ],
 
     link: "https://gall.dcinside.com/mgallery/board/view?id=manosaba&no=223713"
-  },
-  {
-    title: "향기로운 꽃은 늠름하게 피어난다",
-    startDate: "2026-08-15",
-    endDate: "2026-08-27"
   }
 ];
