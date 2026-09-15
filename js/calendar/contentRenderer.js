@@ -985,10 +985,7 @@ function renderContentItem(
     item.addEventListener(
         "click",
         () => {
-
-          window.location.href =
-              content.link;
-
+          window.open(content.link, "_blank");
         }
     );
   }
