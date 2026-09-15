@@ -10,11 +10,11 @@
       content="width=device-width, initial-scale=1.0"
   >
 
-  <title>My Content Calendar</title>
+  <title>My Content Calendar - Year</title>
 
   <link
       rel="stylesheet"
-      href="calendar.css"
+      href="archive.css"
   >
 
 </head>
@@ -28,7 +28,7 @@
   <h1>My Content Calendar</h1>
 
   <p>
-    내가 즐겼던 콘텐츠를 기록합니다.
+    내가 즐겼던 콘텐츠를 한 해 동안 돌아봅니다.
   </p>
 
 
@@ -38,7 +38,7 @@
 
     <a
         href="index.html"
-        class="page-link active"
+        class="page-link"
     >
       Month
     </a>
@@ -46,7 +46,7 @@
 
     <a
         href="archive.html"
-        class="page-link"
+        class="page-link active"
     >
       Year
     </a>
@@ -57,7 +57,7 @@
 
 
 
-<main class="calendar-container">
+<main class="archive-container">
 
 
   <!-- =================================
@@ -93,42 +93,57 @@
 
 
   <!-- =================================
-       월 선택
+       연간 콘텐츠
   ================================== -->
 
-  <section class="month-control">
+  <section class="archive-section">
 
-    <button
-        id="prev-month"
-        class="month-button"
-        aria-label="이전 달"
+    <div class="archive-heading">
+
+      <h3 id="archive-title">
+        2026년에 즐겼던 콘텐츠
+      </h3>
+
+      <p id="archive-count">
+        0개의 콘텐츠
+      </p>
+
+    </div>
+
+
+    <div
+        class="content-carousel"
+        id="content-carousel"
     >
-      ◀
-    </button>
+      <!-- JavaScript로 카드 생성 -->
+
+    </div>
 
 
-    <h3 id="current-month">
-      1월
-    </h3>
+    <!-- 좌우 이동 버튼 -->
+
+    <div class="carousel-controls">
+
+      <button
+          id="prev-content"
+          class="carousel-button"
+          aria-label="이전 콘텐츠"
+      >
+        ◀
+      </button>
 
 
-    <button
-        id="next-month"
-        class="month-button"
-        aria-label="다음 달"
-    >
-      ▶
-    </button>
+      <button
+          id="next-content"
+          class="carousel-button"
+          aria-label="다음 콘텐츠"
+      >
+        ▶
+      </button>
+
+    </div>
 
   </section>
-
-
-
-  <!-- =================================
-       달력
-  ================================== -->
-
-  <section id="calendar"></section>
 
 
 </main>
@@ -138,23 +153,17 @@
 <footer class="site-footer">
 
   <p>
-    My Content Calendar (month.ver)
+    My Content Calendar (year.ver)
   </p>
 
 </footer>
 
 
+
 <script src="js/data/contents.js"></script>
 
-<script src="js/utils/dateUtils.js"></script>
+<script src="js/archive.js"></script>
 
-<script src="js/calendar/contentRenderer.js"></script>
-<script src="js/calendar/month.js"></script>
-<script src="js/calendar/calendar.js"></script>
-
-<script src="js/navigation/navigation.js"></script>
-
-<script src="js/main.js"></script>
 </body>
 
 </html>

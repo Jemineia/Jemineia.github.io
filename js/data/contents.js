@@ -94,5 +94,18 @@ const contents = [
     ],
 
     link: "https://gall.dcinside.com/mgallery/board/view?id=manosaba&no=223713"
+  },
+  {
+    title : "별이 떨어질 때 - 경서",
+    startDate: "2026-09-14",
+    endDate: "2026-09-14",
+    images: [
+      {
+        src : "https://i.ytimg.com/vi/LsJ9vFGphp4/maxresdefault.jpg",
+        fit : "cover"
+      }
+    ],
+
+    link : "https://www.youtube.com/watch?v=LsJ9vFGphp4"
   }
 ];

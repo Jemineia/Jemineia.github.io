@@ -1,0 +1,619 @@
+/* =================================
+   기본
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+
+  background: #f7f7f7;
+
+  color: #222;
+}
+
+
+
+/* =================================
+   헤더
+================================= */
+
+.site-header {
+  padding: 45px 20px 30px;
+
+  text-align: center;
+
+  background: white;
+}
+
+
+.site-header h1 {
+  margin: 0 0 10px;
+
+  font-size: 30px;
+}
+
+
+.site-header p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+
+/* =================================
+   페이지 이동
+================================= */
+
+.page-navigation {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+
+.page-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 90px;
+
+  padding: 8px 16px;
+
+  border-radius: 20px;
+
+  color: #777;
+
+  background: #f1f1f1;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition:
+      background .2s,
+      color .2s,
+      transform .2s;
+}
+
+
+.page-link:hover {
+  transform: translateY(-2px);
+
+  color: #222;
+
+  background: #e8e8e8;
+}
+
+
+.page-link.active {
+  color: white;
+
+  background: #222;
+}
+
+
+
+/* =================================
+   메인
+================================= */
+
+.archive-container {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 40px 0 70px;
+}
+
+
+
+/* =================================
+   연도 선택
+================================= */
+
+.year-control {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 25px;
+
+  margin-bottom: 45px;
+}
+
+
+.year-control h2 {
+  min-width: 110px;
+
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 28px;
+}
+
+
+.control-button {
+  width: 38px;
+  height: 38px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #444;
+
+  cursor: pointer;
+
+  box-shadow:
+      0 2px 8px rgba(0, 0, 0, .08);
+
+  transition:
+      transform .2s,
+      background .2s;
+}
+
+
+.control-button:hover {
+  background: #eee;
+
+  transform: scale(1.08);
+}
+
+
+
+/* =================================
+   연간 콘텐츠 영역
+================================= */
+
+.archive-section {
+  position: relative;
+}
+
+
+.archive-heading {
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+
+.archive-heading h3 {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+
+.archive-heading p {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 13px;
+}
+
+
+
+/* =================================
+   카드 캐러셀
+================================= */
+
+.content-carousel {
+  display: flex;
+
+  gap: 20px;
+
+  overflow-x: auto;
+
+  overflow-y: visible;
+
+  padding: 10px 5px 25px;
+
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: thin;
+}
+
+
+.content-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+
+.content-carousel::-webkit-scrollbar-track {
+  background: #eee;
+
+  border-radius: 10px;
+}
+
+
+.content-carousel::-webkit-scrollbar-thumb {
+  background: #bbb;
+
+  border-radius: 10px;
+}
+
+
+
+/* =================================
+   콘텐츠 카드
+================================= */
+
+.content-card {
+  flex: 0 0 330px;
+
+  min-height: 430px;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: white;
+
+  box-shadow:
+      0 4px 18px rgba(0, 0, 0, .08);
+
+  scroll-snap-align: start;
+
+  cursor: pointer;
+
+  transition:
+      transform .25s,
+      box-shadow .25s;
+}
+
+
+.content-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+      0 10px 30px rgba(0, 0, 0, .14);
+}
+
+
+
+/* =================================
+   카드 이미지
+================================= */
+
+.content-card-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 290px;
+
+  overflow: hidden;
+
+  background: #eee;
+}
+
+
+/* 흐린 배경 */
+
+.content-card-background {
+  position: absolute;
+
+  inset: -15px;
+
+  background-position: center;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  filter: blur(15px);
+
+  transform: scale(1.08);
+
+  opacity: .7;
+
+  z-index: 0;
+}
+
+
+/* 실제 이미지 */
+
+.content-card-image img {
+  position: relative;
+
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  transition:
+      transform .35s;
+}
+
+
+.content-card:hover
+.content-card-image img {
+  transform: scale(1.03);
+}
+
+
+
+/* 이미지가 없을 때 */
+
+.content-card-no-image {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: #aaa;
+
+  font-size: 13px;
+}
+
+
+
+/* =================================
+   카드 정보
+================================= */
+
+.content-card-info {
+  padding: 18px 18px 20px;
+}
+
+
+.content-card-title {
+  margin: 0 0 10px;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.4;
+}
+
+
+.content-card-date {
+  margin: 0;
+
+  color: #888;
+
+  font-size: 12px;
+}
+
+
+.content-card-link {
+  display: inline-block;
+
+  margin-top: 14px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  text-decoration: none;
+}
+
+
+.content-card-link:hover {
+  color: #222;
+
+  text-decoration: underline;
+}
+
+
+
+/* =================================
+   콘텐츠가 없을 때
+================================= */
+
+.empty-message {
+  width: 100%;
+
+  padding: 100px 20px;
+
+  text-align: center;
+
+  color: #999;
+
+  background: white;
+
+  border-radius: 14px;
+}
+
+
+
+/* =================================
+   캐러셀 버튼
+================================= */
+
+.carousel-controls {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+
+.carousel-button {
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #444;
+
+  cursor: pointer;
+
+  box-shadow:
+      0 2px 8px rgba(0, 0, 0, .08);
+
+  transition:
+      transform .2s,
+      background .2s;
+}
+
+
+.carousel-button:hover {
+  background: #eee;
+
+  transform: scale(1.08);
+}
+
+
+
+/* =================================
+   푸터
+================================= */
+
+.site-footer {
+  padding: 30px 20px;
+
+  text-align: center;
+
+  color: #999;
+
+  font-size: 12px;
+
+  background: white;
+}
+
+
+
+/* =================================
+   태블릿
+================================= */
+
+@media (max-width: 900px) {
+
+  .archive-container {
+    width: min(
+        100% - 30px,
+        700px
+    );
+  }
+
+
+  .content-card {
+    flex-basis: 300px;
+
+    min-height: 400px;
+  }
+
+
+  .content-card-image {
+    height: 260px;
+  }
+
+}
+
+
+
+/* =================================
+   모바일
+================================= */
+
+@media (max-width: 600px) {
+
+  .site-header {
+    padding-top: 30px;
+  }
+
+
+  .site-header h1 {
+    font-size: 24px;
+  }
+
+
+  .archive-container {
+    width: calc(100% - 24px);
+
+    padding-top: 30px;
+  }
+
+
+  .year-control {
+    margin-bottom: 30px;
+  }
+
+
+  .year-control h2 {
+    font-size: 24px;
+  }
+
+
+  .archive-heading {
+    display: block;
+  }
+
+
+  .archive-heading h3 {
+    margin-bottom: 6px;
+
+    font-size: 18px;
+  }
+
+
+  .content-carousel {
+    gap: 14px;
+  }
+
+
+  .content-card {
+    flex-basis: 82vw;
+
+    min-height: 390px;
+  }
+
+
+  .content-card-image {
+    height: 250px;
+  }
+
+}
