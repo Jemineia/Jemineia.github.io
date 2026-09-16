@@ -16,6 +16,28 @@ document.addEventListener(
     }
 );
 
+const carousel =
+    document.getElementById(
+        "content-carousel"
+    );
+
+carousel.addEventListener(
+    "wheel",
+    (event) => {
+
+      event.preventDefault();
+
+      carousel.scrollBy({
+        left: event.deltaY,
+        behavior: "smooth"
+      });
+
+    },
+    {
+      passive: false
+    }
+);
+
 /* =================================
    연간 페이지 렌더링
 ================================= */
