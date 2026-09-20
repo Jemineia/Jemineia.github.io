@@ -1,5 +1,10 @@
 /* ========================================
    콘텐츠 데이터
+   title
+   startDate
+   endDate
+
+   images
 ======================================== */
 
 const contents = [
@@ -107,5 +112,17 @@ const contents = [
     ],
 
     link : "https://www.youtube.com/watch?v=LsJ9vFGphp4"
+  },
+  {
+    title: "44교시 생존수업",
+    startDate: "2026-09-20",
+    endDate: "2026-09-20",
+
+    images:[
+      {
+        src : "https://contents.kyobobook.co.kr/sih/fit-in/400x0/pdt/9791143205728.jpg?t=2983086",
+        fit : "cover"
+      }
+    ]
   }
 ];
