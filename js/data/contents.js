@@ -124,5 +124,17 @@ const contents = [
         fit : "cover"
       }
     ]
+  },
+  {
+    title: "과학고 생존일지",
+    startDate: "2026-10-03",
+    endDate: "2026-10-03",
+
+    images: [
+      {
+        src : "images/contents/science.jpg",
+        fit : "cover"
+      }
+    ]
   }
 ];
