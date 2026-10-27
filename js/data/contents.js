@@ -135,7 +135,8 @@ const contents = [
         src : "images/contents/science.jpg",
         fit : "cover"
       }
-    ]
+    ],
+    link : "https://comic.naver.com/webtoon/list?titleId=841608"
   },
   {
     title: "전자오락수호대",
