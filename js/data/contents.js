@@ -136,5 +136,28 @@ const contents = [
         fit : "cover"
       }
     ]
+  },
+  {
+    title: "전자오락수호대",
+    startDate: "2026-10-17",
+    endDate: "2026-10-17",
+    images: [
+      {
+        src : "https://i.ytimg.com/vi/7jwq362anB0/maxresdefault.jpg",
+        fit : "cover"
+      }
+    ]
+  },
+  {
+    title: "아리도록",
+    startDate: "2026-10-24",
+    endDate: "2026-10-24",
+    images: [
+      {
+        src : "https://dcimg2.dcinside.co.kr/viewimage.php?id=2cafd922eac037ad&no=63f39f2fe8d577a26fabd7e44e806b30281cda0962d74760639193943da0d2896ec525d4491810dd57fa07706a767f56c96e4e9b1f4d37855e99ed9900dc75efb87a2bfa92e9",
+        fit : "cover",
+      }
+    ],
+    link : "https://comic.naver.com/webtoon/list?titleId=849736"
   }
 ];
