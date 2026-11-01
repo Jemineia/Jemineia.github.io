@@ -825,74 +825,54 @@ function renderContentItem(
           100 / 7
       );
 
-
   /*
-   * =========================
-   * 세로 위치
-   * =========================
-   *
-   * 하나의 content-layer가
-   * .days 전체를 기준으로 하기 때문에
-   * 현재 주가 몇 번째 주인지에 따라
-   * top 위치를 계산합니다.
-   */
+ * =========================
+ * 반응형 세로 위치 계산
+ * =========================
+ */
 
+  const daysElement =
+      container.parentElement;
 
-  /*
-   * 날짜 영역의 기본 주 높이
-   *
-   * CSS:
-   *
-   * .day {
-   *   min-height: 130px;
-   * }
-   */
+  const calendarStyles =
+      getComputedStyle(daysElement);
+
   const weekHeight =
-      130;
+      parseFloat(
+          calendarStyles.getPropertyValue(
+              "--calendar-week-height"
+          )
+      ) || 130;
 
-
-  /*
-   * 콘텐츠 시작 영역
-   *
-   * 날짜 숫자가 있는 영역을
-   * 피하기 위해 30px 아래에서 시작합니다.
-   */
   const contentTop =
-      30;
+      parseFloat(
+          calendarStyles.getPropertyValue(
+              "--content-top"
+          )
+      ) || 30;
 
-
-  /*
-   * 콘텐츠 하나의 높이
-   *
-   * CSS:
-   *
-   * .content-item {
-   *   height: 90px;
-   * }
-   */
   const rowHeight =
-      90;
+      parseFloat(
+          calendarStyles.getPropertyValue(
+              "--content-row-height"
+          )
+      ) || 90;
 
-
-  /*
-   * 콘텐츠 row 사이의 간격
-   */
   const rowGap =
-      5;
+      parseFloat(
+          calendarStyles.getPropertyValue(
+              "--content-row-gap"
+          )
+      ) || 5;
 
+  const top =
+      contentTop +
+      week * weekHeight +
+      segment.row * (rowHeight + rowGap);
 
   /*
    * 최종 top 위치
    */
-  const top =
-      contentTop +
-      week * weekHeight +
-      segment.row *
-      (
-          rowHeight +
-          rowGap
-      );
-
 
   /*
    * =========================

@@ -148,7 +148,8 @@ const contents = [
         src : "images/contents/Light My Night.jpg",
         fit : "cover"
       }
-    ]
+    ],
+    link: "https://youtu.be/pBt2fO1NxS0"
   },
   {
     title: "전자오락수호대",
