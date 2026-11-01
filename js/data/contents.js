@@ -13,37 +13,37 @@ const contents = [
     startDate: "2026-04-04",
     endDate: "2026-04-08",
 
-    images:[
+    images: [
       {
-        src : "images/contents/2x2Love.png",
-        fit : "background"
+        src: "images/contents/2x2Love.png",
+        fit: "background"
       },
       {
-        src : "images/contents/2x2Love2.png",
-        fit : "background"
+        src: "images/contents/2x2Love2.png",
+        fit: "background"
       }
     ]
   },
   {
-    title : "당신과 나의 존재불명",
+    title: "당신과 나의 존재불명",
     startDate: "2026-05-10",
     endDate: "2026-05-12",
-    images : [
-        {
-          src: "images/contents/noexistence.png",
-          fit : "background"
-        }
+    images: [
+      {
+        src: "images/contents/noexistence.png",
+        fit: "background"
+      }
     ]
   },
   {
-    title : "초 카구야 공주!",
+    title: "초 카구야 공주!",
     startDate: "2026-07-05",
     endDate: "2026-07-06",
 
-    images:[
+    images: [
       {
-        src : "images/contents/kaguyahime.jpg",
-        fit : "cover"
+        src: "images/contents/kaguyahime.jpg",
+        fit: "cover"
       }
     ]
   },
@@ -101,27 +101,27 @@ const contents = [
     link: "https://gall.dcinside.com/mgallery/board/view?id=manosaba&no=223713"
   },
   {
-    title : "별이 떨어질 때 - 경서",
+    title: "별이 떨어질 때 - 경서",
     startDate: "2026-09-14",
     endDate: "2026-09-14",
     images: [
       {
-        src : "https://i.ytimg.com/vi/LsJ9vFGphp4/maxresdefault.jpg",
-        fit : "cover"
+        src: "https://i.ytimg.com/vi/LsJ9vFGphp4/maxresdefault.jpg",
+        fit: "cover"
       }
     ],
 
-    link : "https://www.youtube.com/watch?v=LsJ9vFGphp4"
+    link: "https://www.youtube.com/watch?v=LsJ9vFGphp4"
   },
   {
     title: "44교시 생존수업",
     startDate: "2026-09-20",
     endDate: "2026-09-20",
 
-    images:[
+    images: [
       {
-        src : "https://contents.kyobobook.co.kr/sih/fit-in/400x0/pdt/9791143205728.jpg?t=2983086",
-        fit : "cover"
+        src: "https://contents.kyobobook.co.kr/sih/fit-in/400x0/pdt/9791143205728.jpg?t=2983086",
+        fit: "cover"
       }
     ]
   },
@@ -132,11 +132,14 @@ const contents = [
 
     images: [
       {
-        src : "images/contents/science.jpg",
-        fit : "cover"
+        src: "images/contents/science.jpg",
+        fit: "cover"
       }
     ],
-    link : "https://comic.naver.com/webtoon/list?titleId=841608"
+    link: "https://comic.naver.com/webtoon/list?titleId=841608"
+  },
+  {
+    title: ""
   },
   {
     title: "전자오락수호대",
@@ -144,10 +147,22 @@ const contents = [
     endDate: "2026-10-17",
     images: [
       {
-        src : "https://i.ytimg.com/vi/7jwq362anB0/maxresdefault.jpg",
-        fit : "cover"
+        src: "https://i.ytimg.com/vi/7jwq362anB0/maxresdefault.jpg",
+        fit: "cover"
       }
     ]
+  },
+  {
+    title: "Brave Shine(v. 토키노 메리)",
+    startDate: "2026-10-18",
+    endDate: "2026-10-18",
+    images: [
+      {
+        src: "images/contents/BS.jpg",
+        fit: "cover"
+      }
+    ],
+    link: "https://youtu.be/v306nw4cvwI"
   },
   {
     title: "아리도록",
@@ -155,10 +170,10 @@ const contents = [
     endDate: "2026-10-24",
     images: [
       {
-        src : "https://dcimg2.dcinside.co.kr/viewimage.php?id=2cafd922eac037ad&no=63f39f2fe8d577a26fabd7e44e806b30281cda0962d74760639193943da0d2896ec525d4491810dd57fa07706a767f56c96e4e9b1f4d37855e99ed9900dc75efb87a2bfa92e9",
-        fit : "cover",
+        src: "https://dcimg2.dcinside.co.kr/viewimage.php?id=2cafd922eac037ad&no=63f39f2fe8d577a26fabd7e44e806b30281cda0962d74760639193943da0d2896ec525d4491810dd57fa07706a767f56c96e4e9b1f4d37855e99ed9900dc75efb87a2bfa92e9",
+        fit: "cover",
       }
     ],
-    link : "https://comic.naver.com/webtoon/list?titleId=849736"
+    link: "https://comic.naver.com/webtoon/list?titleId=849736"
   }
 ];
