@@ -826,49 +826,30 @@ function renderContentItem(
       );
 
   /*
- * =========================
- * 반응형 세로 위치 계산
- * =========================
- */
+  * =========================
+  * 위치 적용
+  * =========================
+  */
 
-  const daysElement =
-      container.parentElement;
+  item.style.left =
+      `${left}%`;
 
-  const calendarStyles =
-      getComputedStyle(daysElement);
+  item.style.width =
+      `${width}%`;
 
-  const weekHeight =
-      parseFloat(
-          calendarStyles.getPropertyValue(
-              "--calendar-week-height"
-          )
-      ) || 130;
+  /*
+   * 세로 위치는 CSS가 계산합니다.
+   * (calendar.css의 .content-item top 참고)
+   */
+  item.style.setProperty(
+      "--week",
+      week
+  );
 
-  const contentTop =
-      parseFloat(
-          calendarStyles.getPropertyValue(
-              "--content-top"
-          )
-      ) || 30;
-
-  const rowHeight =
-      parseFloat(
-          calendarStyles.getPropertyValue(
-              "--content-row-height"
-          )
-      ) || 90;
-
-  const rowGap =
-      parseFloat(
-          calendarStyles.getPropertyValue(
-              "--content-row-gap"
-          )
-      ) || 5;
-
-  const top =
-      contentTop +
-      week * weekHeight +
-      segment.row * (rowHeight + rowGap);
+  item.style.setProperty(
+      "--row",
+      segment.row
+  );
 
   /*
    * 최종 top 위치
@@ -886,11 +867,6 @@ function renderContentItem(
 
   item.style.width =
       `${width}%`;
-
-
-  item.style.top =
-      `${top}px`;
-
 
   /*
    * =========================

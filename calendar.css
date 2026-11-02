@@ -1,3 +1,10 @@
+:root {
+  --calendar-week-height: 130px;
+  --content-top: 30px;
+  --content-row-height: 90px;
+  --content-row-gap: 5px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -188,7 +195,7 @@ body {
 .day {
   position: relative;
   min-width: 0;
-  min-height: 130px;
+  height: var(--calendar-week-height, 130px);
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
   background: white;
@@ -269,14 +276,19 @@ body {
 ========================= */
 
 .content-item {
+  --week: 0;
+  --row: 0;
+
   position: absolute;
-
-  height: 90px;
+  height: var(--content-row-height, 90px);
+  top: calc(
+      var(--content-top, 30px) +
+      var(--week) * var(--calendar-week-height, 130px) +
+      var(--row) * (var(--content-row-height, 90px) + var(--content-row-gap, 5px))
+  );
   padding: 3px;
-
   pointer-events: auto;
   cursor: pointer;
-
   z-index: 21;
   border-radius: 7px;
 }
@@ -465,17 +477,15 @@ body {
 ========================= */
 
 @media (max-width: 900px) {
+  :root {
+    --calendar-week-height: 115px;
+    --content-top: 30px;
+    --content-row-height: 78px;
+    --content-row-gap: 4px;
+  }
 
   .calendar-container {
     width: 96%;
-  }
-
-  .day {
-    min-height: 115px;
-  }
-
-  .content-item {
-    height: 78px;
   }
 }
 
@@ -485,6 +495,13 @@ body {
 ========================= */
 
 @media (max-width: 600px) {
+
+  :root {
+    --calendar-week-height: 90px;
+    --content-top: 22px;
+    --content-row-height: 60px;
+    --content-row-gap: 3px;
+  }
 
   .site-header {
     padding: 30px 15px 25px;
@@ -516,10 +533,6 @@ body {
     font-size: 11px;
   }
 
-  .day {
-    min-height: 90px;
-  }
-
   .day-number {
     top: 6px;
     left: 6px;
@@ -532,13 +545,6 @@ body {
     z-index: 20;
   }
 
-  .content-item {
-    height: 60px;
-    padding: 2px;
-
-    z-index: 21;
-  }
-
   .content-no-image {
     padding: 0 5px;
     font-size: 10px;
@@ -547,6 +553,11 @@ body {
   .content-background {
     filter: blur(8px);
     transform: scale(1.06);
+  }
+
+  .content-item {
+    padding: 2px;
+    z-index: 21;
   }
 }
 
