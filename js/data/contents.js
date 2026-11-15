@@ -185,5 +185,18 @@ const contents = [
       }
     ],
     link: "https://comic.naver.com/webtoon/list?titleId=849736"
+  },
+  {
+    title: "아빠가 힘을 숨김",
+    startDate: "2026-11-15",
+    endDate: "2026-11-15",
+    images: [
+      {
+        src:
+"https://pbs.twimg.com/media/GscLi6sacAAeLAn?format=webp&name=large",
+        fit: "cover",
+      }
+    ],
+    link: "https://page.kakao.com/home/%EC%95%84%EB%B9%A0%EA%B0%80-%ED%9E%98%EC%9D%84-%EC%88%A8%EA%B9%80/65504205/"
   }
 ];
