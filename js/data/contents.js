@@ -198,5 +198,17 @@ const contents = [
       }
     ],
     link: "https://page.kakao.com/home/%EC%95%84%EB%B9%A0%EA%B0%80-%ED%9E%98%EC%9D%84-%EC%88%A8%EA%B9%80/65504205/"
+  },
+  {
+    title: "니케 Maria-n",
+    startDate: "2026-11-16",
+    endDate: "2026-11-16",
+    images: [
+      {
+        src:
+"https://private-user-images.githubusercontent.com/118803136/707708722-561e1ebc-c6c1-4dc8-82bd-0d9003a60491.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTQ4MzU0MDksIm5iZiI6MTc5NDgzNTEwOSwicGF0aCI6Ii8xMTg4MDMxMzYvNzA3NzA4NzIyLTU2MWUxZWJjLWM2YzEtNGRjOC04MmJkLTBkOTAwM2E2MDQ5MS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMTE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTExNlQxMzE4MjlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03YzY3MmU0YzU5OTEyYzRhZDJjMzJjYTIyYWVmZGVjOWVlNzUxYWE3OTEzOTQ0OGUyYTRkNWE3NDczNWM5ZDhkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.dnw_xBjkQP75T9r_E8PD0FytGlSqX2HR7Hph8s5E8V0",
+        fit: "cover",
+      }
+    ]
   }
 ];
