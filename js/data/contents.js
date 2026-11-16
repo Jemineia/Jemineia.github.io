@@ -209,6 +209,7 @@ const contents = [
 "https://ac-o.arca.live/20261105sac/3fd069bc7ae6a0429c971740472e21b1230e9279c334634e2134285fa271aaec.jpg?expires=1794839617&key=PI7gjTYXK9OLnlhMeI6k3Q&type=orig",
         fit: "cover",
       }
-    ]
+    ],
+  link : "https://ac-o.arca.live/20261105sac/3fd069bc7ae6a0429c971740472e21b1230e9279c334634e2134285fa271aaec.jpg?expires=1794839617&key=PI7gjTYXK9OLnlhMeI6k3Q&type=orig"
   }
 ];
